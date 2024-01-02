@@ -29,6 +29,7 @@ public class Calendar1 {
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
 	 private static void advance()
 	 {
+	 	int countdate = 0;
 	 	int day = 2;
 	 	for(int year = 1900;year<2000;year++)
 	 	{
@@ -39,13 +40,18 @@ public class Calendar1 {
 		 			if(day>7)
 		 				day=1;
 		 			if(day==1)
+		 			{
+		 				if(j==1)
+		 					countdate++;
 		 				System.out.println(j+"/"+i+"/"+year+" Sunday");
+		 			}
 		 			else  System.out.println(j+"/"+i+"/"+year);
 		 			day++;
 		 		}
 
 		 	}
 		}
+		System.out.println("During the 20th century, " +countdate+" Sundays fell on the first day of the month");
 
 
 
