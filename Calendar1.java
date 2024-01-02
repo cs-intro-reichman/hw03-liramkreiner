@@ -75,8 +75,8 @@ public class Calendar1 {
 		if(month==2)//check if the month is feb and check how many days it should have depend on either it is leap ot common year
 		{
 			if (isLeapYear(year))
-					return 28;
-		 return 29;
+					return 29;
+		 return 28;
 		}
 		return 31;//if the month is nither of the month above
 
