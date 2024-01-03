@@ -1,5 +1,5 @@
 /** String processing exercise 1. */
-public class owerCase {
+public class lowerCase {
     public static void main(String[] args) {  
         String str = args[0];
         System.out.println(lowerCase(str)); //printing the new string after lowe hiw letter
