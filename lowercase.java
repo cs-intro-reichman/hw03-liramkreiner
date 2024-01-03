@@ -1,6 +1,8 @@
 /** String processing exercise 1. */
-public class lowercase {
-    public static void main(String[] args) {  
+public class LowerCase 
+{
+    public static void main(String[] args) 
+    {  
         String str = args[0];
         System.out.println(lowerCase(str)); //printing the new string after lowe hiw letter
        
@@ -19,9 +21,9 @@ public class lowercase {
         {   
             char newchar ='a';
             int valueofchar=s.charAt(i);//getting the value of the char
-            if(valueofchar>96)//check if the letter is Capital
-             newchar = (char)(valueofchar );
-                else  newchar = (char)(valueofchar + 32);//32 is the diffrense between capitl and low letter
+            if(64<valueofchar&&valueofchar<91)//check if the letter is Capital
+             newchar = (char)(valueofchar+32 );
+                else  newchar = (char)(valueofchar);//32 is the diffrense between capitl and low letter
             newone+= newchar;
 
 
