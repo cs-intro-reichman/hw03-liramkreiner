@@ -1,5 +1,5 @@
 /** String processing exercise 1. */
-public class lowercase 
+public class LowerCase 
 {
     public static void main(String[] args) 
     {  
