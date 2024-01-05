@@ -1,7 +1,7 @@
 /** 
  * Prints the calendars of all the years in the 20th century.
  */
-public class Calendar1 
+public class Calendar 
 {	
     // Starting the calendar on 1/1/1900
 	static int dayOfMonth = 1;   
