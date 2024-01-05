@@ -42,12 +42,13 @@ public class LoanCalc {
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) 
     {  
     	 
-		double payment = loan/n;
-		while (endBalance(loan,rate,n,payment) >= 0)   {
-		payment += epsilon;
-		iterationCounter++;
+		double payment = loan/n;//deter the first payment to be loan/period
+		while (endBalance(loan,rate,n,payment) >= 0)   
+		{
+			payment += epsilon;//advence the payment with epsioln
+			iterationCounter++; //check how much time the loop run
 		}
-		 return payment;
+		 return payment; // returning the payment
     }
     
     /**
@@ -61,18 +62,18 @@ public class LoanCalc {
     {  
 		
 
-		double payment =  loan/n, loanforwork = loan;
-		double checkpayment = (payment + loan) /2;
+		double payment =  loan/n, loanforwork = loan;//stetting the first payment to be loan/period
+		double checkpayment = (payment + loan) /2; //setting g according to algoritem
 		while (loanforwork - payment > epsilon)
 		 {		
-		 	if (endBalance(loan,rate,n,checkpayment) * endBalance(loan,rate,n,payment)>0 )
+		 	if (endBalance(loan,rate,n,checkpayment) * endBalance(loan,rate,n,payment)>0 ) //if f(g)*f(l)>0
 				payment = checkpayment;
 				else
 					loanforwork = checkpayment;
 			checkpayment = (loanforwork + payment) / 2;
-			iterationCounter1++;
+			iterationCounter1++; //checking how much time the loop run
 		}
-		return checkpayment;
+		return checkpayment; //returning the payment
     }
 	
 	/**
@@ -83,8 +84,8 @@ public class LoanCalc {
 	{
 		double endofbalance = loan;
 		for (int i=0;i<n;i++)
-			endofbalance = (endofbalance-payment) * (1+rate/100);
-		return endofbalance;
+			endofbalance = (endofbalance-payment) * (1+rate/100); //cheking how much mony left to pay
+		return endofbalance; // returning the rest of the mony that left after the payments
 
 	}
 }
