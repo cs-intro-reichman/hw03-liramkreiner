@@ -17,16 +17,11 @@ public class Calendar
 		{
 		
 	 		 int year = Integer.parseInt(args[0]);
-	 		advance(year);
+	 		advance(year);//initiate the function with the givven year
 	 		
 	 		
         }
-	 	//// Write the necessary ending code here
 	 
-	
-	 // Advances the date (day, month, year) and the day-of-the-week.
-	 // If the month changes, sets the number of days in this month.
-	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
 	 private static void advance(int years)
 	 {
 	 	int day = 2;
@@ -34,7 +29,7 @@ public class Calendar
 	 	{
 		 	for (int i =1;i<13;i++)
 		 	{
-		 		for (int j=1;j<nDaysInMonth(i,year)+1;j++)
+		 		for (int j=1;j<nDaysInMonth(i,year)+1;j++)//checking when is sunday
 		 		{
 		 			if(day>7)
 		 				day=1;
@@ -47,9 +42,9 @@ public class Calendar
 		 	{
 		 		for (int j=1;j<nDaysInMonth(i,years)+1;j++)
 		 		{
-		 			if(day>7)
+		 			if(day>7)//check if the week is passed
 		 				day=1;
-		 			if(day==1)
+		 			if(day==1)//check if sunday
 		 			{
 		 				System.out.println(j+"/"+i+"/"+years+" Sunday");
 		 			}
@@ -76,10 +71,6 @@ public class Calendar
 		return isleap;
 	}
 	 
-	// Returns the number of days in the given month and year.
-	// April, June, September, and November have 30 days each.
-	// February has 28 days in a common year, and 29 days in a leap year.
-	// All the other months have 31 days.
 	private static int nDaysInMonth(int month, int year) {
 		if (month == 4 ||month == 6 ||month == 9 ||month == 11)// checkif the month is april june september or november
 		return 30;
